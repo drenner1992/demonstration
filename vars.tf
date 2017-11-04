@@ -9,8 +9,8 @@ variable "instance_type" {
 }
 
 variable "image_id" {
-  description = "Ubuntu image ID"
-  default     = "ami-785db401"
+  description = "AWS AMI"
+  default     = "ami-acd005d5"
 }
 
 variable "subnets" {
@@ -19,14 +19,7 @@ variable "subnets" {
   default     = ["subnet-0ce1b054", "subnet-77607501", "subnet-8f392deb"]
 }
 
-variable "location" {
-  default     = "Ireland (eu-west-1)"
-}
-
-variable "location2" {
-  default     = "Frankfurt (eu-west-2)"
-}
-
-variable "Image" {
-  default     = "Ubuntu Server 14.04"
+variable "DefaultSG" {
+  description = "ID for your default SG in your VPC"
+  default = ["sg-eaf61193"]
 }
