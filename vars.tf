@@ -10,16 +10,16 @@ variable "instance_type" {
 
 variable "image_id" {
   description = "AWS AMI"
-  default     = "ami-acd005d5"
+  default     = "ami-0080e4c5bc078760e"
 }
 
 variable "subnets" {
   description = "subnet IDs within my VPC"
   type        = "list"
-  default     = ["subnet-0ce1b054", "subnet-77607501", "subnet-8f392deb"]
+  default     = ["subnet-24afc943", "subnet-2c9ff202", "subnet-7b08a245"]
 }
 
 variable "DefaultSG" {
   description = "ID for your default SG in your VPC"
-  default = ["sg-eaf61193"]
+  default = ["sg-6caf6929"]
 }
