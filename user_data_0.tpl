@@ -1,9 +1,7 @@
-#!/bin/bash
-yum install httpd -y
-yum install git -y
-service httpd start
+#!/bin/sh
+yum -y install httpd php
 chkconfig httpd on
-git clone https://github.com/drenner1992/website.git
-cd website
-git checkout one
-cp -R * /root/website /var/www/html
+/etc/init.d/httpd start
+cd /var/www/html
+wget http://s3-demo-using-terraform.s3-website-us-east-1.amazonaws.com/demo.zip
+unzip demo.zip
